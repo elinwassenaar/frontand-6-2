@@ -31,11 +31,15 @@ body {
         margin: 1rem;
     }
 
-        .navigation-list li {
-            /*display: inline;*/
-            margin: 0.2rem;
+        .navigation-list {
+            display: flex;
+            justify-content: space-evenly;
         }
 
+        .navigation-list li {
+            margin: 0 1rem;
+        }
+        
         .navigation-list a {
             color: white;
             text-decoration: none;
@@ -46,11 +50,23 @@ body {
     display: flex;
     flex-direction: row;
     background: mistyrose;
+    flex-grow: 1;
 }
 
+    .main-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-section-top{
+        display: flex;
+        flex-grow: 1;
+    }
+
     .main-content {
-        order: 0;
-        flex: 3 1 auto;
+        display: flex;
+        flex-direction: column;
+        flex: 4 1 0%;
         background: white;
         font-family: serif;
         padding: 0 1em;
@@ -59,29 +75,23 @@ body {
     .sidebar {
         display: flex;
         flex-direction: column;
-        flex: 2 1 auto;
+        flex: 1 1 0%;
+        max-width: 450px;
         align-content: center;
         align-items: center;
     }
 
-        .sidebar h2 {
-            width: 15vw;
-        }
-
         .sidebar img {
-            width: 15vw;
+            flex: 1 2 auto;
         }
 
-        .sidebar-left {
-            order: -1;
-        }
-
-        .sidebar-right {
-            order: 1;
+        .main-section .sidebar img {
+            max-width: 350px;
+            /*Dit is vast niet de manier om het plaatje rechts kleiner te krijgen, maar anders kom ik er niet uit*/
         }
 
             
-.footer {
+.main-section-bottom {
     display: flex;
     background: darkred;
     justify-content: center;
